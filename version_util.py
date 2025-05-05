@@ -11,4 +11,4 @@ class VersionUtil:
         except Exception:
             return "unknown"
 
-print(VersionUtil.get_version())
+# print(VersionUtil.get_version())
