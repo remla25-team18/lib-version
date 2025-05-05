@@ -1,5 +1,3 @@
-import os
-
 class VersionUtil:
 
     def __init__(self):
@@ -12,3 +10,5 @@ class VersionUtil:
                 return f.read().strip()
         except Exception:
             return "unknown"
+
+print(VersionUtil.get_version())
