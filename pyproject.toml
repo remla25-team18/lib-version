@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lib-version"
+version = "0.0.1"
+description = "Version-aware Library"
+authors = [
+    { name = "Group 18" }
+]
+#requires-python = ">=3.7"
+
+[tool.setuptools]
+packages = ["lib_version"]
