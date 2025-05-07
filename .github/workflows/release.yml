@@ -30,9 +30,9 @@ jobs:
         run: |
           IFS='.' read -r MAJOR MINOR PATCH <<< "${{steps.get_tag.outputs.VERSION}}"
           PREV_PATCH=$((PATCH - 1))
-          PREV_TAG=$((v$MAJOR.$MINOR.${PREV_PATCH}-pre))
+          PREV_TAG=$((v$MAJOR.$MINOR.${PREV_PATCH}))
           
-          git tag --delete v${PREV_TAG}
+          git tag --delete ${PREV_TAG}
           git push "${{ env.remote_repo }}" --delete ${GITHUB_REF}
           git tag -l
 
